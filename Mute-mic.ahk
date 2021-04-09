@@ -10,8 +10,8 @@ ComponentTypes = MASTER ; ComponentTypes to look through. Possible options: VOLU
 ControlTypes = VOLUME ; ControlTypes to look through. Possible options: MASTER,HEADPHONES,DIGITAL,LINE,MICROPHONE,SYNTH,CD,TELEPHONE,PCSPEAKER,WAVE,AUX,ANALOG,N/A
 micnumber := getDeviceNumber(volume, ComponentTypes, ControlTypes)
 
-SoundSet, +1, MASTER, mute, 10
-SoundGet, master_mute, , mute, 10
+SoundSet, +1, MASTER, mute, micnumber
+SoundGet, master_mute, , mute, micnumber
 
 ToolTip, Mute %master_mute% ;use a tool tip at mouse pointer to show what state mic is after toggle
 SetTimer, RemoveToolTip, 1000
